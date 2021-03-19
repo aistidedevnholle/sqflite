@@ -1,7 +1,6 @@
 import 'package:dark_side/person.dart';
 import 'package:dark_side/sqflitebd.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,8 +8,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  static Map <int, Color> color = {100 :Color.fromRGBO(27, 38, 49,1)};
-  MaterialColor materialColor = MaterialColor(0x1B2631, color);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,43 +17,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       home: DisplayPerson(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar:PreferredSize(
-          preferredSize: Size(0.0,90.0),
-          child: ClipPath(
-              clipper: WaveClipperOne(flip: false),
-              child: Container(
-                child: AppBar(
-                  backgroundColor: Color.fromRGBO(27, 38, 49,1),
-                  title: Text('Dark Side.',style: TextStyle(fontSize: 18.0)),
-                ),
-              ))),
-      body: Container(
-        child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisSpacing: 10, mainAxisSpacing: 10,crossAxisCount: 2),
-            itemBuilder: (context, i) {
-              return Container(
-                child: Text('$i'),
-              );
-            }),
-      ),
     );
   }
 }
