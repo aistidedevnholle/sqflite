@@ -1,6 +1,6 @@
-# dark_side
+# Sqfilite
 
-La réelle maladie incurable dont souffre et dans laquelle baigne ce monde est l'ignorance.
+UTILSER sqflite POUR STOCKER EN LOCAL DES DONNEES PLUS COMPLEXES
 
 ## Getting Started
 
